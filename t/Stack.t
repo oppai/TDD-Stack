@@ -42,6 +42,11 @@ subtest 'pop(), take out first element in stack' => sub {
         is $stack->pop, 2;
         is $stack->count, 1;
     };
+    subtest 'no elements in stack' => sub {
+        my $stack = Stack->new();
+        is $stack->pop, undef;
+        is $stack->count, 0;
+    };
 };
 
 done_testing;

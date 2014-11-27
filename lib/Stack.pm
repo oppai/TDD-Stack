@@ -20,7 +20,7 @@ sub count {
 sub pop {
     my $self = shift;
     my $last_element = $self->{_elements}[ -1 ];
-    $self->{_count} -= 1;
+    $self->{_count} -= 1 if $last_element;
     return $last_element;
 }
 
